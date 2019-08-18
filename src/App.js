@@ -1,13 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, HashRouter, Route, Link, Switch } from 'react-router-dom';
 import Header from './Header';
-import { 
-  CSSTransition, 
-  TransitionGroup 
-} from 'react-transition-group';
-import Resume from './Resume';
+
 
 import Pdf from './Files/career.pdf';
 
@@ -35,7 +29,7 @@ function App() {
               <a href={Pdf} target="_blank">A1. "CAREER"</a>
             </li>
             <li> 
-              <a href="/music">B1. "MUSIC"</a>
+              <a href="https://soundcloud.com/harryosullivan" target="_blank">B1. "MUSIC"</a>
             </li>
           </div>
         </div>
