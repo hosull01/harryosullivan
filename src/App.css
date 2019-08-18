@@ -1,33 +1,132 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(124, 86, 15);
+}
+
+
 .App {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.social-media-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  z-index:1;
+}
+
+.social-media-header li {
+  list-style: none; 
+  padding: 10px;
+  float: left;
+  display: block;
+}
+
+.social-media-header li:hover {
+  transform: scale(1.10);
+  position: relative;
+  transition: all 0.5s;
+  animation: rotation 2s infinite linear;
+
+}
+
+.App-Container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+ 
+.Vinyl {
+  max-width: 100%;
+  max-height: 100%; 
+  z-index: 2;
+  animation: rotation 20s infinite linear;
+}
+
+
+@keyframes rotation {
+  0%   { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.Sleeve {
+  position: absolute;
+  height: 93%;
+  width: 90%;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.75);
+  border: solid 7px rgba(233, 15, 15, 1.0);
+  transition: 1s;
+  background-color: rgb(189, 117, 10);
+}
+
+
+.Vinyl-Label {
+  position: absolute;
+  height: 25%;
+  width: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0.9vw;
+}
+
+.Vinyl-Label > h1 {
+  font-size: 0.9vw;
+  padding-top: 5%;
+  transform: scaleY(2.3);
+}
+
+
+.Speed-Label {
+  height: 25%;
+  width: 25%;
+  left: 10%;
+  top: 44%;
+  font-size: 0.4vw;
+  position: absolute;
+}
+
+.Side-Label {
+  height: 25%;
+  width: 25%;
+  right: 10%;
+  top: 47%;
+  font-size: 0.4vw;
+  position: absolute;
+}
+
+.Track-Label {
+  list-style: none; 
+  position: absolute;
+  height: 40%;
+  width: 70%;
+  top: 65%;
+  left: 15%;
+  right: 20%;
+}
+
+
+.Track-Label a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Track-Label a:hover {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: black;
+  box-shadow: 0px 5px 50px #000000;
+  position: relative;
 }
